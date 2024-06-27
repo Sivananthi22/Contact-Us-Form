@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-image: url(./hotel.png);
+}
+
+.container {
+    text-align: center;
+    margin-top: 450px;
+    border: #000;
+}
+#contactBtn{
+    font-size: larger;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#contactModal{
+    margin-top: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-left: 650px;
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #000;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    color: yellow;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 30px 0 5px;
+    color: white;
+    background-color: #000;
+    border: white;
+}
+
+form input,
+form textarea{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #000;
+    color: yellow;
+}
+
+form button {
+    color: black;
+    background-color: yellow;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    margin-left: 180px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: rgba(216, 213, 32, 0.4);
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.error {
+    color: red;
+    display: block;
+}
