@@ -12,6 +12,7 @@ body {
 #contactBtn{
     font-size: larger;
     border-radius: 10px;
+    background: linear-gradient(270deg, yellow, white);
 }
 
 button {
@@ -19,6 +20,10 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+#contactBtn:hover {
+    background: linear-gradient(270deg, yellow, gray);
+}
+
 #contactModal{
     margin-top: auto;
 }

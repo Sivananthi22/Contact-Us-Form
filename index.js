@@ -12,9 +12,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         modal.style.display = "none";
     }
 
-
     form.onsubmit = function(event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         document.querySelectorAll('.error').forEach(el => el.textContent = '');
 
@@ -51,6 +50,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
             isValid = false;
         }
 
+        if (!name && !address && !phone && !email && !message) {
+            alert('Please fill out all fields.');
+        }
+
         if (isValid) {
             const contactData = {
                 name: name,
@@ -60,7 +63,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 message: message
             };
 
-
             localStorage.setItem('contactData', JSON.stringify(contactData));
 
             alert('Your message has been sent successfully!');
@@ -69,4 +71,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
             form.reset();
         }
     }
+
+
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+
+    nameInput.addEventListener('input', function() {
+        nameInput.style.backgroundColor = 'white';
+        nameInput.style.color = 'black';
+    });
+
+    emailInput.addEventListener('input', function() {
+        emailInput.style.backgroundColor = 'white';
+        emailInput.style.color = 'black';
+    });
 });
